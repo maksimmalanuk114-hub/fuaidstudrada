@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>fuaidstudrada | Автор</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
 
@@ -19,17 +20,26 @@
     </nav>
 
     <div class="content" style="text-align: center;">
-        <img src="img/me.jpg" alt="Маланюк М." class="my-photo">
         
+        <p><i>Натисніть на фото, щоб збільшити</i></p>
+        
+        <img src="img/me.jpg" alt="Маланюк Максим І." class="my-photo img-clickable" id="myImg">
+        
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+
         <h2>Маланюк Максим І.</h2>
-        <p>Голова студентської ради ФУАІД </p>
-        <p><b>Спеціальність:</b> 014 Середня освіта: Інформатика </p>
+        <p>Голова студентської ради ФУАІД</p>
+        <p><b>Спеціальність:</b> 014 Середня освіта: Інформатика</p>
         
         <hr>
         
         <h3>Контакти</h3>
         <p>Телефон: 0677891292</p>
-        <p>Email: pluzmaks@gmail.com</p>
+        <p>Email: (впиши тут свій імейл)</p>
 
         <br>
         <p>© Маланюк М., 2025</p>
@@ -39,7 +49,7 @@
         <p>&copy; 2025 fuaidstudrada</p>
     </footer>
 
+    <script src="js/script.js"></script>
+
 </body>
-
 </html>
-
