@@ -56,4 +56,115 @@ th {
 .my-photo {
     width: 200px;
     border-radius: 10px;
+
+}
+.news-widget {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.news-widget h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+.news-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+.news-list a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+.news-list a:hover {
+    text-decoration: underline;
+}
+.news-date {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Адаптивні контейнери для відео та карти */
+.video-container, .map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Співвідношення 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+.video-container iframe, .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Стилі для збільшення фото (Lightbox) --- */
+/* Фото, на яке можна клікнути */
+.img-clickable {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.img-clickable:hover {
+    opacity: 0.7;
+}
+
+/* Модальне вікно (фон) */
+.modal {
+    display: none; /* Приховано за замовчуванням */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Чорний фон з прозорістю */
+}
+
+/* Збільшене зображення */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Анімація збільшення */
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* Кнопка закриття (хрестик) */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
